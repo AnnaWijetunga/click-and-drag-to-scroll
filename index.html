@@ -37,29 +37,29 @@
 <script>
   const slider = document.querySelector('.items');
   let isDown = false;
-  let startX;
+  let startX; // records the initial click down
   let startLeft;
 
   slider.addEventListener('mousedown', () => {
     isDown = true;
     slider.classList.add('active');
-  })
+    console.log(e);
+  });
 
   slider.addEventListener('mouseleave', () => {
     isDown = true;
     slider.classList.remove('active');
-  })
+  });
 
   slider.addEventListener('mouseup', () => {
     isDown = true;
     slider.classList.remove('active');
-  })
+  });
 
   slider.addEventListener('mousemove', () => {
     if(!isDown) return; // stop the fn from running
     console.log(isDown);
-  })
-
+  });
 
 
 
